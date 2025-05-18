@@ -1,0 +1,58 @@
+<div class="container mx-auto p-4 max-w-xl">
+  <h2 class="text-2xl font-bold mb-4">Agregar Factura</h2>
+  <form (ngSubmit)="guardar()" class="grid gap-4">
+    <div class="mb-2">
+      <label for="mes" class="block font-medium mb-1">Mes y Año:</label>
+      <input type="month" id="mes" [(ngModel)]="factura.mes" name="mes" class="w-full p-2 border rounded" required />
+    </div>
+    
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label for="agua" placeholder="Ej: 1210000" class="block font-medium mb-1">Agua:</label>
+        <input type="number" id="agua" [(ngModel)]="factura.agua" name="agua" class="w-full p-2 border rounded" />
+      </div>
+      
+      <div>
+        <label for="gas" placeholder="Ej: 1210000" class="block font-medium mb-1">Gas:</label>
+        <input type="number" id="gas" [(ngModel)]="factura.gas" name="gas" class="w-full p-2 border rounded" />
+      </div>
+      
+      <div>
+        <label for="energia" placeholder="Ej: 1210000" class="block font-medium mb-1">Energía:</label>
+        <input type="number" id="energia" [(ngModel)]="factura.energia" name="energia" class="w-full p-2 border rounded" />
+      </div>
+      
+      <div>
+        <label for="internet" placeholder="Ej: 1210000" class="block font-medium mb-1">Internet:</label>
+        <input type="number" id="internet" [(ngModel)]="factura.internet" name="internet" class="w-full p-2 border rounded" />
+      </div>
+      
+      <div>
+        <label for="pago_arriendo" placeholder="Ej: 1210000" class="block font-medium mb-1">Pago Arriendo:</label>
+        <input type="number" id="pago_arriendo" [(ngModel)]="factura.pago_arriendo" name="pago_arriendo" class="w-full p-2 border rounded" />
+      </div>
+      
+      <div>
+        <label for="ingreso1" placeholder="Ej: 1210000" class="block font-medium mb-1">Ingreso 1:</label>
+        <input type="number" id="ingreso1" [(ngModel)]="factura.ingreso1" name="ingreso1" class="w-full p-2 border rounded" />
+      </div>
+      
+      <div>
+        <label for="ingreso2" placeholder="Ej: 1210000" class="block font-medium mb-1">Ingreso 2:</label>
+        <input type="number" id="ingreso2" [(ngModel)]="factura.ingreso2" name="ingreso2" class="w-full p-2 border rounded" />
+      </div>
+      
+      <div>
+        <label for="ingreso3" placeholder="Ej: 1210000" class="block font-medium mb-1">Ingreso 3:</label>
+        <input type="number" id="ingreso3" [(ngModel)]="factura.ingreso3" name="ingreso3" class="w-full p-2 border rounded" />
+      </div>
+      
+      <div>
+        <label for="ingreso4" placeholder="Ej: 1210000" class="block font-medium mb-1">Ingreso 4:</label>
+        <input type="number" id="ingreso4" [(ngModel)]="factura.ingreso4" name="ingreso4" class="w-full p-2 border rounded" />
+      </div>
+    </div>
+    
+    <button type="submit" class="bg-green-600 text-white py-2 rounded hover:bg-green-500">Guardar</button>
+  </form>
+</div>
