@@ -11,11 +11,14 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@ngx-env/builder:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "outputPath": "dist/facturas-casa",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -56,13 +59,13 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@ngx-env/builder:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "facturas-casa:build:production"
+              "browserTarget": "facturas-casa:build:production"
             },
             "development": {
-              "buildTarget": "facturas-casa:build:development"
+              "browserTarget": "facturas-casa:build:development"
             }
           },
           "defaultConfiguration": "development"
